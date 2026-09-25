@@ -1,1 +1,1 @@
-print("Hello!" * 99, sep='\n')
+print("Hello!!@!")

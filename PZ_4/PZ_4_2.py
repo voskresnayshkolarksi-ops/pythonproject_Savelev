@@ -1,0 +1,27 @@
+#
+S = 0.0
+K = 0
+
+while True:
+    try:
+        A = float(input("Введите число больше 1 : "))
+        K = int(input("Введите число К: "))
+        if A > 1:
+            break
+        else:
+            print("НЕ выполнили условие!!!")
+            A = float(input("Введите число больше 1 : "))
+    except ValueError:
+        print("Вы ввели не число!!!")
+        A = float(input("Введите число больше 1 : "))
+        K = int(input("Введите число К: "))
+
+while S < A:
+    K += 1
+    S += 1 / K
+
+S -= 1 / K
+K -= 1
+
+print(f"Наибольшее целое K: {K}")
+print(f"Сумма гармонического ряда: {S}")

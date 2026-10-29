@@ -16,9 +16,17 @@ while True:
     except ValueError:
         print("Вы ввели не число!!!")
 
-num = (
-        X - (X ** 3) / 3 + (X ** 5) / 5 + ((-1) ** N) *
-        (X ** (2 * N + 1)) / (2 * N + 1)
-      )
+num = 0.0
+current_pow = X
+znak = 1
 
-print(num)
+i = 0
+while i <= N:
+    denominator = 2 * i + 1
+    term = znak * current_pow / denominator
+    num += term
+    current_pow *= X * X
+    znak = -znak
+    i += 1
+
+print("приближенным значением функции arctg в точке Х = ",num)

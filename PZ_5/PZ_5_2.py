@@ -8,7 +8,8 @@ def Mean(X, Y):
     return AMean, GMean
 
 print("Введите 4 положительных числа через пробел")
-A, B, C, D = map(float, input().split())
+A, B = float(input("Число 1: ")), float(input("Число 2: "))
+C, D = float(input("Число 3: ")), float(input("Число 4: "))
 
 am_ab, gm_ab = Mean(A, B)
 print(f"Пара (А,B).Среднее арифметическое {am_ab:.3f}, среднее геометрическое {gm_ab:.3f}")

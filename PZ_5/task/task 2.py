@@ -6,7 +6,6 @@ def get_P(a, b):
 def get_S(a, b):
     return a * b
 
-# Ввод данных от пользователя
 width = float(input("Введите ширину прямоугольника: "))
 height = float(input("Введите высоту прямоугольника: "))
 

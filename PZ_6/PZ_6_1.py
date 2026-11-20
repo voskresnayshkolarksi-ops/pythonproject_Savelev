@@ -7,11 +7,17 @@ K = int(input("Введите К (1 < K ≤ L ≤ N):"))
 L = int(input("Введите L: "))
 i = 0
 
+
 while i < N:
     lst_start.append(1 + i)
     i += 1
 
-lst = lst_start[:K - 1] + lst_start[L:]
+print("Первоначальный список", lst_start)
 
-print("Сумма списка равна", sum(lst))
+lst = (lst_start[:K - 1] + lst_start[L:])
+
+print("используемый числа",lst)
+print("количество используемых чисел",len(lst))
+
+print("Сумма списка равна", sum(lst) / len(lst))
 

@@ -9,18 +9,26 @@
 
 lst_X = []
 lst_Y = []
-N = int(input("Введите колическтва точек: "))
+N = int(input("Введите количество точек: "))
 i = 0
-b = 0
-k = 0
 
 while i < N:
-    lst_X.append(input(f"Введите значение X{b + 1} координат: "))
+    lst_X.append(float(input(f"Введите значение X{i + 1} координат: ")))
+    lst_Y.append(float(input(f"Введите значение Y{i + 1} координат: ")))
     i += 1
-    lst_Y.append(input(f"Введите значение Y{b + 1} координат: "))
-    k += 1
-    b += 1
 
+max_R = -1
+ans_X = 0
+ans_Y = 0
+i = 0
 
+while i < N:
+    if lst_X[i] < 0 and lst_Y[i] > 0:
+        R = ((lst_X[i] - 0) ** 2 + (lst_Y[i] - 0) ** 2) ** 0.5
+        if R > max_R:
+            max_R = R
+            ans_X = lst_X[i]
+            ans_Y = lst_Y[i]
+    i += 1
 
-print(lst_X, lst_Y)
+print("Искомая точка:", ans_X, ans_Y)

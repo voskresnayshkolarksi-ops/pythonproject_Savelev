@@ -19,5 +19,5 @@ lst = (lst_start[:K - 1] + lst_start[L:])
 print("используемый числа",lst)
 print("количество используемых чисел",len(lst))
 
-print("Сумма списка равна", sum(lst) / len(lst))
+print("Среднее аривметическое списка равна", sum(lst) / len(lst))
 
